@@ -12,7 +12,18 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <title>My website</title>
+
     <style>
+        @viewport {
+            zoom: 1.0;
+            width: extend-to-zoom;
+        }
+        
+        @-ms-viewport {
+            width: extend-to-zoom;
+            zoom: 1.0;
+        }
+        
         html {
             scroll-behavior: smooth;
             font-size: 10px;
@@ -22,7 +33,7 @@
             background-color: rgb(19, 19, 19);
             margin: 0rem;
             padding: 0rem;
-            height: 200rem;
+            height: 400rem;
         }
         
         .container {
@@ -144,11 +155,12 @@
         
         .container3 {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             flex-flow: column;
             overflow: visible;
             pointer-events: all;
-            height: 240rem;
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             background-image: url(bg2.png);
             background-position-y: 11rem;
             background-repeat: no-repeat;
@@ -183,10 +195,11 @@
         
         .container4 {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             flex-flow: column;
             overflow: visible;
             pointer-events: all;
-            height: 200rem;
             background-color: rgb(19, 19, 19);
         }
         
@@ -217,6 +230,8 @@
         }
         
         .footer {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             padding-left: 3.0rem;
             margin: 10rem 0rem;
             height: 10.0rem;
@@ -338,7 +353,6 @@
         }
         
         .connect {
-            position: relative;
             text-align: center;
             color: rgb(255, 238, 0);
             font-size: 2rem;
