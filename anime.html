@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <title>My website</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-size: 10px;
+        }
+        
+        body {
+            background-color: rgb(19, 19, 19);
+            margin: 0rem;
+            padding: 0rem;
+            height: 200rem;
+        }
+        
+        .container {
+            display: flex;
+            flex-flow: column;
+            overflow: visible;
+            pointer-events: all;
+        }
+        
+        .navbar {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+            padding: 1rem 2rem;
+            background-color: yellow;
+            box-shadow: 0rem .5rem 10rem rgb(41, 41, 41);
+            opacity: 95%;
+            margin-left: -4rem;
+            position: fixed;
+            width: 100%;
+            pointer-events: all;
+        }
+        
+        .navbar img {
+            display: flex;
+            margin: -.6rem;
+            height: 8rem;
+            pointer-events: none;
+            animation-name: nezuko;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: ease-in-out;
+        }
+        
+        @keyframes nezuko {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(30deg);
+            }
+            75% {
+                transform: rotate(-30deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        
+        .navbar li {
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem 8rem;
+            margin: 0rem 2rem;
+            font-size: 2.2rem;
+            font-family: 'Kanit', sans-serif;
+        }
+        
+        .navbar li a {
+            text-decoration: none;
+            color: rgb(37, 37, 37);
+            text-shadow: 0rem 0.3rem 2rem rgb(255, 255, 255);
+            transition: .5s linear;
+            font-weight: bolder;
+        }
+        
+        .navbar li a:hover {
+            color: rgb(82, 82, 82);
+            font-size: 2rem;
+            transition: .3s;
+            font-weight: bold;
+        }
+        
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        
+        .heading {
+            height: 80rem;
+            width: 35rem;
+            border: 2rem 2rem yellow;
+        }
+        
+        .heading h1 {
+            display: flex;
+            color: rgb(238, 255, 0);
+            justify-content: space-evenly;
+            padding-top: 24rem;
+            font-size: 8rem;
+            font-family: 'Noto Serif JP', serif;
+            font-style: italic;
+            transition: .6s ease-in-out;
+        }
+        
+        .heading h1:hover {
+            font-size: 8.5rem;
+            text-shadow: 0rem 0rem 2rem yellow;
+            transition: .6s ease-in-out;
+        }
+        
+        .heading h2 {
+            display: flex;
+            color: rgb(255, 255, 255);
+            justify-content: space-evenly;
+            font-size: 4rem;
+            font-family: 'Noto Serif JP', serif;
+            font-style: italic;
+        }
+        
+        .heading img {
+            height: 75rem;
+            padding-left: 22.6rem;
+            padding-top: 5rem;
+        }
+        
+        .container3 {
+            display: flex;
+            flex-flow: column;
+            overflow: visible;
+            pointer-events: all;
+            height: 240rem;
+            background-color: white;
+            background-image: url(bg2.png);
+            background-position-y: 11rem;
+            background-repeat: no-repeat;
+        }
+        
+        .list h1 {
+            font-size: 4rem;
+            font-family: 'Noto Serif JP', serif;
+            text-align: center;
+            padding: 1rem 2rem;
+            color: rgb(255, 238, 0);
+            border: .6rem solid;
+            border-color: rgb(29, 29, 29);
+            background-color: rgb(29, 29, 29);
+            box-shadow: 0rem 0rem 3.0rem rgb(29, 29, 29);
+        }
+        
+        .list h2 {
+            font-size: 3rem;
+            font-family: 'Kanit', sans-serif;
+            text-align: center;
+            padding-top: 2rem;
+            transition: .2s ease-in-out;
+        }
+        
+        .list h2:hover {
+            font-size: 4rem;
+            transition: .2s ease-in-out;
+            pointer-events: all;
+            text-shadow: 0rem 0rem 2rem rgb(31, 31, 31);
+        }
+        
+        .container4 {
+            display: flex;
+            flex-flow: column;
+            overflow: visible;
+            pointer-events: all;
+            height: 200rem;
+            background-color: rgb(19, 19, 19);
+        }
+        
+        .edits {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .edits h1 {
+            display: flex;
+            color: rgb(238, 255, 0);
+            justify-content: space-evenly;
+            padding: 10rem;
+            font-size: 5rem;
+            font-family: 'Noto Serif JP', serif;
+            font-style: italic;
+        }
+        
+        .edits img {
+            display: flex;
+            border: 1rem solid;
+            border-color: rgb(34, 34, 34);
+            border-radius: 5rem;
+            background-color: rgb(51, 51, 51);
+            box-shadow: 0rem 0rem 3.0rem rgb(139, 139, 139);
+        }
+        
+        .footer {
+            padding-left: 3.0rem;
+            margin: 10rem 0rem;
+            height: 10.0rem;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            width: 8.0rem;
+            height: 8.0rem;
+            background: rgb(59, 59, 59);
+            margin: 5.0rem;
+            border-radius: 70%;
+            box-shadow: .1rem 2.0rem 5.0rem rgb(0, 0, 0);
+            color: rgb(240, 255, 25);
+            text-shadow: .2rem 1.0rem 10.0rem black;
+            position: relative;
+            transition: 0.25s linear;
+        }
+        
+        .btn i {
+            line-height: 8.0rem;
+            font-size: 2.6rem;
+            transition: 0.3s linear;
+        }
+        
+        .btn:hover i {
+            transform: scale(1.3);
+            transition: 0.5s;
+            color: rgb(59, 59, 59);
+        }
+        
+        .btn:hover {
+            background-color: rgb(255, 238, 0);
+            transition: 0.25s linear;
+        }
+        
+        #whatsapp {
+            height: 3.0rem;
+            width: 17.0rem;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            margin: -12.0rem -5.0rem;
+            background-color: rgb(251, 255, 0);
+            pointer-events: none;
+            border-radius: 1.0rem;
+            transition-duration: .9s;
+            border-color: rgb(255, 238, 0);
+        }
+        
+        .btn:hover #whatsapp {
+            opacity: 1;
+        }
+        
+        .what {
+            position: absolute;
+            font-size: 2.0rem;
+            font-family: 'Noto Serif JP', serif;
+            color: rgb(61, 61, 61);
+        }
+        
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 0.2s ease-in-out;
+            border: 1rem solid rgb(251, 255, 0);
+            border-radius: 1.0rem;
+            z-index: 10;
+            background-color: rgb(238, 255, 0);
+            width: 30.0rem;
+            height: 6.0rem;
+            max-width: 80%;
+            box-shadow: .1rem 2.0rem 5.0rem black;
+        }
+        
+        .popup.active {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .pophead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.7rem 1.2rem;
+        }
+        
+        .pophead .title {
+            font-size: 2.0rem;
+            font-family: 'Noto Serif JP', serif;
+            color: rgb(37, 37, 37);
+        }
+        
+        .pophead .close {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            color: black;
+            font-size: 2.4rem;
+        }
+        
+        #overlay {
+            position: fixed;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(27, 27, 27);
+            pointer-events: none;
+        }
+        
+        #overlay.active {
+            opacity: 0.6;
+            pointer-events: all;
+        }
+        
+        .connect {
+            position: relative;
+            text-align: center;
+            color: rgb(255, 238, 0);
+            font-size: 2rem;
+            font-family: 'Kanit', sans-serif;
+            background-color: rgb(48, 48, 48);
+            margin: 0rem 45.0rem;
+            border-radius: 4.0rem;
+            box-shadow: .2rem 2.0rem 10.0rem black;
+            transition: .3s linear;
+        }
+        
+        .connect:hover {
+            transform: scale(0.9);
+            background-color: rgb(255, 251, 0);
+            color: rgb(48, 48, 48);
+            transition: .2s linear;
+            pointer-events: all;
+        }
+        
+        .copy {
+            font-size: 1.5rem;
+            color: yellow;
+            padding: 1rem;
+            opacity: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img id="nezuko" src="nezuko.png">
+            <ul>
+                <li class="item"><a href="#container2">HOME</a></li>
+                <li class="item"><a href="#container3">MY ANIME LIST</a></li>
+                <li class="item"><a href="#container4">ANIME EDITS</a></li>
+                <li class="item"><a href="#footer">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container2" id="container2">
+        <div class="heading">
+            <h1 id="topic1">
+                KON'NICHIWA
+            </h1>
+            <h2 id="topic2">
+                "HEY!!"
+            </h2>
+        </div>
+        <div class="heading">
+            <img id="zenitsu" src="zenitsu.png">
+        </div>
+    </div>
+    <div class="container3" id="container3">
+        <div class="list">
+            <h1 id="head">
+                These are some of the Anime series I've watched:
+            </h1>
+            <h2 id=names>
+                1.Demon Slayer: Kimetsu No Yaiba (My Fav)
+                <h2>2.Attack On Titan : Shingeki no Kyojin</h2>
+                <h2>3.Rascal Does Not Dream of Bunny Girl Senpai</h2>
+                <h2>4.Your Lie In April</h2>
+                <h2>5.Jujutsu Kaisen</h2>
+                <h2>6.Tokyo Ghoul(S3)</h2>
+                <h2>7.Death Note</h2>
+                <h2>8.One Punch Man (S1)</h2>
+                <h2>9.My Hero Academia (S2) </h2>
+                <h2>10.Inuyashiki</h2>
+                <h2>11.Tokyo Revengers</h2>
+                <h2>12.Mob Psycho 100</h2>
+                <h2>13.Naruto(150 eps...)</h2>
+            </h2>
+            <h1 id="head2">
+                These are some of the Anime Movies I've watched:
+            </h1>
+            <h2 id=names>
+                1.Your name
+                <h2>2.Hoturobi no mori e</h2>
+                <h2>3.Weathering With You</h2>
+                <h2>4.Grave of the fireflies</h2>
+                <h2>5.I want to eat your pancreas</h2>
+                <h2>6.Silent Voice</h2>
+                <h2>7. 5 centimetres per second</h2>
+                <h2>8. Demon Slayer:Mugen train</h2>
+                <h2>9. Rascal does not dream of a dreaming girl</h2>
+                <h2>10. Cowboy Bebop</h2>
+
+            </h2>
+        </div>
+    </div>
+    <div class="container4" id=container4>
+        <div class="edits">
+            <h1>Wanna see some Anime edits I've made?</h1>
+            <img id="anime" src="anime.png">
+            <h1>You can also see my AMV/edits on my instagram</h1>
+            <h1>Link below :)</h1>
+            <h1>お越し頂きありがとうございます</h1>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <div class="connect">
+            <h1 id="connect">Connect With Me</h1>
+        </div>
+        <a class="btn " href="https://instagram.com/progen_rizwal?igshid=17zbk9bye0zpl" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a class="btn" href="https://www.youtube.com/channel/UCnq5zsjs7xgjrmo-Vp4ONJw" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a class="btn" data-modal-target="#popup">
+            <i class="far fa-envelope"></i>
+
+        </a>
+        <a class="btn" target="#">
+            <i class="fab fa-whatsapp"></i>
+            <p class="what" id="whatsapp">+91 9622248488</p>
+
+        </a>
+        <div class="copy">
+            <h3>
+                © Copyright 2022 by Rizwal. All rights reserved.
+            </h3>
+        </div>
+        <div class=popup id=popup>
+            <div class="pophead">
+                <div class="title">
+                    abrolrizwal25@gmail.com
+                </div>
+                <button data-close-button class="close">&times;</button>
+            </div>
+        </div>
+
+        <div id="overlay"></div>
+        <script>
+            const openModalButtons = document.querySelectorAll('[data-modal-target]')
+            const closeModalButtons = document.querySelectorAll('[data-close-button]')
+            const overlay = document.getElementById('overlay')
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = document.querySelector(button.dataset.modalTarget)
+                    openModal(popup)
+                })
+            })
+
+            overlay.addEventListener('click', () => {
+                const modals = document.querySelectorAll('.popup.active')
+                modals.forEach(popup => {
+                    closeModal(popup)
+                })
+            })
+
+            closeModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = button.closest('.popup')
+                    closeModal(popup)
+                })
+            })
+
+            function openModal(popup) {
+                if (popup == null) return
+                popup.classList.add('active')
+                overlay.classList.add('active')
+            }
+
+            function closeModal(popup) {
+                if (popup == null) return
+                popup.classList.remove('active')
+                overlay.classList.remove('active')
+            }
+        </script>
+    </div>
+    </div>
+
+</body>
+
+</html>
