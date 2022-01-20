@@ -38,6 +38,7 @@
         
         .container {
             display: flex;
+            flex-wrap: wrap;
             flex-flow: column;
             overflow: visible;
             pointer-events: all;
@@ -59,7 +60,6 @@
         
         .navbar img {
             display: flex;
-            margin: -.6rem;
             height: 8rem;
             pointer-events: none;
             animation-name: nezuko;
@@ -116,13 +116,14 @@
         }
         
         .heading {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             height: 80rem;
             width: 35rem;
             border: 2rem 2rem yellow;
         }
         
         .heading h1 {
-            display: flex;
             color: rgb(238, 255, 0);
             justify-content: space-evenly;
             padding-top: 24rem;
@@ -139,7 +140,6 @@
         }
         
         .heading h2 {
-            display: flex;
             color: rgb(255, 255, 255);
             justify-content: space-evenly;
             font-size: 4rem;
@@ -148,6 +148,8 @@
         }
         
         .heading img {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             height: 75rem;
             padding-left: 22.6rem;
             padding-top: 5rem;
@@ -162,7 +164,7 @@
             pointer-events: all;
             background-color: rgb(255, 255, 255);
             background-image: url(bg2.png);
-            background-position-y: 11rem;
+            background-position-y: 10rem;
             background-repeat: no-repeat;
         }
         
@@ -353,20 +355,17 @@
         }
         
         .connect {
-            text-align: center;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             color: rgb(255, 238, 0);
             font-size: 2rem;
             font-family: 'Kanit', sans-serif;
-            background-color: rgb(48, 48, 48);
-            margin: 0rem 45.0rem;
-            border-radius: 4.0rem;
-            box-shadow: .2rem 2.0rem 10.0rem black;
+            background-color: rgb(19, 19, 19);
             transition: .3s linear;
         }
         
         .connect:hover {
             transform: scale(0.9);
-            background-color: rgb(255, 251, 0);
             color: rgb(48, 48, 48);
             transition: .2s linear;
             pointer-events: all;
@@ -438,9 +437,10 @@
                 <h2>5.I want to eat your pancreas</h2>
                 <h2>6.Silent Voice</h2>
                 <h2>7. 5 centimetres per second</h2>
-                <h2>8. Demon Slayer:Mugen train</h2>
-                <h2>9. Rascal does not dream of a dreaming girl</h2>
-                <h2>10. Cowboy Bebop</h2>
+                <h2>8.Demon Slayer:Mugen train</h2>
+                <h2>9.Rascal does not dream of a dreaming girl</h2>
+                <h2>10.Cowboy Bebop</h2>
+                <h2>11.Spirited Away</h2>
 
             </h2>
         </div>
